@@ -1,8 +1,17 @@
 import Grid from "../Grid/Grid";
 import ImageCard from "../ImageCard/ImageCard";
 
+interface Image {
+  id: string;
+  urls: {
+    thumb: string;
+    regular: string;
+  };
+  alt_description: string;
+}
+
 interface ImageGalleryProps {
-  images: any[];
+  images: Image[];
   openModal: (url: string, alt: string) => void;
 }
 
